@@ -27,7 +27,7 @@ namespace excess_ui
         public ProjectQuery Open(string projectName)
         {
             var projectPath = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
-            projectPath = Path.Combine(projectPath, projectName);
+            projectPath = Path.Combine(projectPath, "..\\..\\tests\\", projectName);
 
             _files = new List<IFileDescriptor>();
             FileDescriptor _rootFolder;
